@@ -1,27 +1,49 @@
+import 'package:dropdown_field/districts/colombo.dart';
+import 'package:dropdown_field/screens/dropdown_home_screen.dart';
 import 'package:flutter/material.dart';
-class Sample extends StatefulWidget {
+class Co1 extends StatefulWidget {
 
 
   @override
-  _SampleState createState() => _SampleState();
+  _Co1State createState() => _Co1State();
 }
 
-class _SampleState extends State<Sample> {
+class _Co1State extends State<Co1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
+      appBar:AppBar(
+        brightness: Brightness.dark,
+        backgroundColor: Colors.transparent,
         elevation: 0.0,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Text('Colombo',style: TextStyle(color: Colors.black,fontSize: 20.0),),
-            SizedBox(width: 8.0,),
-            Text('District',style: TextStyle(color: Colors.blue,fontSize: 20.0),)
-          ],
+        toolbarHeight: 70,
+        title:const Text("Colombo - Wellampitiya"),
+        centerTitle: true,
+        flexibleSpace: Container(
+          decoration:const BoxDecoration(
+              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight: Radius.circular(20)),
+              gradient: LinearGradient(
+                  colors: [Color(0xff002fff),Color(0xff00f4ff),],
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter
+              )
+          ),
         ),
-        backgroundColor: Colors.white,
+        leading:IconButton(
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>ColomboDistrict()));
+          },
+          icon: Icon(Icons.arrow_back),
+        ) ,
+        actions: [
+          IconButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>DropDown()));
+            },
+            icon: Icon(Icons.home),
+          ) ,
+        ],
+
       ),
 
       body: Container(
@@ -32,7 +54,7 @@ class _SampleState extends State<Sample> {
          child: Column(
            crossAxisAlignment: CrossAxisAlignment.start,
            children: [
-             SizedBox(height: 15.0,),
+             SizedBox(height: 25.0,),
              Padding(
                padding: EdgeInsets.only(left: 15.0,right: 15.0),
               child: Container(
@@ -60,18 +82,18 @@ class _SampleState extends State<Sample> {
 
                       ),
                       SizedBox(width: 10.0,),
-                      Text('Company Name',style: TextStyle(color: Colors.white,fontSize: 20.0),)
+                      Text('Company Name',style: TextStyle(color: Colors.white,fontSize: 20.0,fontWeight: FontWeight.bold),)
                     ],
                   ),
                 )
                )
              ), //COMPANY NAME 01
-             SizedBox(height: 15.0,),
+             SizedBox(height: 18.0,),
              Padding(
                padding: EdgeInsets.only(left: 15.0,right: 15.0),
                child: Text('International Social Service\nAwissawella Road\nWellampitiya.',style: TextStyle(color: Colors.black,fontSize: 20.0,fontWeight:FontWeight.bold),),
              ) ,//COMPANY NAME 02
-             SizedBox(height: 25.0,),
+             SizedBox(height: 30.0,),
              Padding(
                  padding: EdgeInsets.only(left: 15.0,right: 15.0),
                  child: Container(
@@ -99,18 +121,18 @@ class _SampleState extends State<Sample> {
 
                            ),
                            SizedBox(width: 10.0,),
-                           Text('Contact Numbers',style: TextStyle(color: Colors.white,fontSize: 20.0),)
+                           Text('Contact Numbers',style: TextStyle(color: Colors.white,fontSize: 20.0,fontWeight: FontWeight.bold),)
                          ],
                        ),
                      )
                  )
              ), //CONTACT NUMBER 01
-             SizedBox(height: 15.0,),
+             SizedBox(height: 18.0,),
              Padding(
                padding: EdgeInsets.only(left: 15.0,right: 15.0),
                child: Text('011-2890466\n0770460422',style: TextStyle(color: Colors.black,fontSize: 20.0,fontWeight:FontWeight.bold),),
              ) ,//CONTACT NUMBER 02
-             SizedBox(height:25.0,),
+             SizedBox(height:30.0,),
              Padding(
                  padding: EdgeInsets.only(left: 15.0,right: 15.0),
                  child: Container(
@@ -138,18 +160,18 @@ class _SampleState extends State<Sample> {
 
                            ),
                            SizedBox(width: 10.0,),
-                           Text('Nature of the business',style: TextStyle(color: Colors.white,fontSize: 20.0),)
+                           Text('Nature of the business',style: TextStyle(color: Colors.white,fontSize: 20.0,fontWeight: FontWeight.bold),)
                          ],
                        ),
                      )
                  )
              ), //PERSON 01
-             SizedBox(height: 15.0,),
+             SizedBox(height: 18.0,),
              Padding(
                padding: EdgeInsets.only(left: 15.0,right: 15.0),
                child: Text('Collector',style: TextStyle(color: Colors.black,fontSize: 20.0,fontWeight:FontWeight.bold),),
              ) ,//PERSON 02
-             SizedBox(height:25.0,),
+             SizedBox(height:30.0,),
              Padding(
                  padding: EdgeInsets.only(left: 15.0,right: 15.0),
                  child: Container(
@@ -177,18 +199,18 @@ class _SampleState extends State<Sample> {
 
                            ),
                            SizedBox(width: 10.0,),
-                           Text('Materials - Collected/Recycled ',style: TextStyle(color: Colors.white,fontSize: 20.0),)
+                           Text('Materials - Collected/Recycled ',style: TextStyle(color: Colors.white,fontSize: 20.0,fontWeight: FontWeight.bold),)
                          ],
                        ),
                      )
                  )
              ), //MATERIALS 01
-             SizedBox(height: 15.0,),
+             SizedBox(height: 18.0,),
              Padding(
                padding: EdgeInsets.only(left: 15.0,right: 15.0),
                child: Text('PET, PP,ABS,HDPE,LDPE,\nPaper(white, news papers,old books),\nGlass (white)',style: TextStyle(color: Colors.black,fontSize: 20.0,fontWeight:FontWeight.bold),),
              ) ,//MATERIALS 02
-             SizedBox(height:25.0,),
+             SizedBox(height:30.0,),
              Padding(
                  padding: EdgeInsets.only(left: 15.0,right: 15.0),
                  child: Container(
@@ -216,13 +238,13 @@ class _SampleState extends State<Sample> {
 
                            ),
                            SizedBox(width: 10.0,),
-                           Text('There Final product',style: TextStyle(color: Colors.white,fontSize: 20.0),)
+                           Text('There Final product',style: TextStyle(color: Colors.white,fontSize: 20.0,fontWeight: FontWeight.bold),)
                          ],
                        ),
                      )
                  )
              ), //PRODUCT 01
-             SizedBox(height: 15.0,),
+             SizedBox(height: 18.0,),
              Padding(
                padding: EdgeInsets.only(left: 15.0,right: 15.0),
                child: Text('',style: TextStyle(color: Colors.black,fontSize: 20.0,fontWeight:FontWeight.bold),),

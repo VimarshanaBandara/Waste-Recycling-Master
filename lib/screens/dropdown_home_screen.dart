@@ -1,6 +1,24 @@
+import 'package:dropdown_field/districts/Mullaithivu.dart';
+import 'package:dropdown_field/districts/badulla.dart';
+import 'package:dropdown_field/districts/batticaloa.dart';
+import 'package:dropdown_field/districts/colombo.dart';
+import 'package:dropdown_field/districts/gampaha.dart';
+import 'package:dropdown_field/districts/hambanthota.dart';
+import 'package:dropdown_field/districts/jaffna.dart';
+import 'package:dropdown_field/districts/kaluthara.dart';
+import 'package:dropdown_field/districts/kandy.dart';
+import 'package:dropdown_field/districts/kegalle.dart';
+import 'package:dropdown_field/districts/kilinochchi.dart';
+import 'package:dropdown_field/districts/kurunegala.dart';
+import 'package:dropdown_field/districts/matale.dart';
+import 'package:dropdown_field/districts/polonnaruwa.dart';
+import 'package:dropdown_field/districts/puttalam.dart';
+import 'package:dropdown_field/districts/ratnapura.dart';
+import 'package:dropdown_field/districts/trinco.dart';
+import 'package:dropdown_field/districts/vavniya.dart';
 import 'package:dropdown_field/screens/ExpandedListAnimationWidget.dart';
 import 'package:dropdown_field/screens/Scrollbar.dart';
-import 'package:dropdown_field/screens/sample.dart';
+
 import 'package:flutter/material.dart';
 
 
@@ -142,9 +160,109 @@ class _DropDownState extends State<DropDown> {
                 SizedBox(height: 20.0,),
                 RaisedButton(
                   onPressed: (){
-                    if(title == _list.elementAt(24) ){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Sample()));}
+                    if(title == _list.elementAt(4) ){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>ColomboDistrict()));}
+
+                    else if(title == _list.elementAt(6) )
+                   {
+                   Navigator.push(context, MaterialPageRoute(builder: (context)=>GampahaDistrict()));}
+
+
+                 else if(title == _list.elementAt(9) )
+                 {
+                 Navigator.push(context, MaterialPageRoute(builder: (context)=>KalutharaDistrict()));}
+
+
+                    else if(title == _list.elementAt(22) )
+                    {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>RatnapuraDistrict()));}
+
+                    else if(title == _list.elementAt(11) )
+                    {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>KegalleDistrict()));}
+
+
+                    else if(title == _list.elementAt(13) )
+                    {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>KurunegalaDistrict()));}
+
+
+                    else if(title == _list.elementAt(21) )
+                    {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>PuttalamDistrict()));}
+
+
+                    else if(title == _list.elementAt(20) )
+                    {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>PolonnaruwaDistrict()));}
+
+
+                    else if(title == _list.elementAt(24) )
+                    {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>VavniyaDistrict()));}
+
+
+                    else if(title == _list.elementAt(8) )
+                    {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>JaffnaDistrict()));}
+
+
+                    else if(title == _list.elementAt(12) )
+                    {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>KilinochchiDistrict()));}
+
+
+                    else if(title == _list.elementAt(18) )
+                    {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>MullaithivuDistrict()));}
+
+
+                    else if(title == _list.elementAt(2) )
+                    {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>BadullaDistrict()));}
+
+
+                    else if(title == _list.elementAt(2) )
+                    {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>MataleDistrict()));}
+
+
+                    else if(title == _list.elementAt(7) )
+                    {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>HambanthotaDistrict()));}
+
+
+                    else if(title == _list.elementAt(10) )
+                    {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>KandyDistrict()));}
+
+
+                    else if(title == _list.elementAt(23) )
+                    {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>TrincomaleeDistrict()));}
+
+
+                    else if(title == _list.elementAt(3) )
+                    {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>BatticaloaDistrict()));}
+
+
                   },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                   child: Text('Select the centers'),
                   color: Colors.blue,
                 )
