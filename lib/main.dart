@@ -1,4 +1,5 @@
 import 'package:dropdown_field/screens/dropdown_home_screen.dart';
+import 'package:dropdown_field/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:DropDown(),
+      home:SplashScreen(),
     );
   }
 }

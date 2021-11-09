@@ -18,6 +18,7 @@ import 'package:dropdown_field/districts/trinco.dart';
 import 'package:dropdown_field/districts/vavniya.dart';
 import 'package:dropdown_field/screens/ExpandedListAnimationWidget.dart';
 import 'package:dropdown_field/screens/Scrollbar.dart';
+import 'package:dropdown_field/screens2/detect_screen.dart';
 
 import 'package:flutter/material.dart';
 
@@ -56,28 +57,38 @@ List <String> _list =[
 class _DropDownState extends State<DropDown> {
   bool isStrechedDropDown = false;
   int groupValue;
-  String title = 'Select Animals';
+  String title = 'Select Your District';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         extendBodyBehindAppBar: true,
-        appBar: AppBar(
+        appBar:AppBar(
           title: Text(
-            "Custom Drop Down ",
+            "Waste Recycling in Sri-Lanka",
             style: TextStyle(color: Colors.black),
           ),
           centerTitle: true,
-          backgroundColor: Colors.transparent,
-          elevation: 0,
+          backgroundColor: Colors.white,
+          elevation: 0.5,
           iconTheme: IconThemeData(color: Colors.black),
         ),
+
         body: Container(
-          height: double.infinity,
-          width: double.infinity,
+          //height: double.infinity,
+          //width: double.infinity,
+          decoration:  BoxDecoration(
+              borderRadius: BorderRadius.only(topLeft: Radius.circular(50.0), topRight:Radius.circular(50.0) ),
+
+              image: DecorationImage(
+                image: AssetImage('images/bg.png'),
+                fit: BoxFit.fill, colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.8), BlendMode.dstATop),
+              )
+          ),
           padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
           child: SafeArea(
             child: Column(
               children: [
+                SizedBox(height: 20.0,),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -158,19 +169,19 @@ class _DropDownState extends State<DropDown> {
                   ],
                 ),
                 SizedBox(height: 20.0,),
-                RaisedButton(
-                  onPressed: (){
+                RaisedButton.icon(
+                  onPressed: () {
                     if(title == _list.elementAt(4) ){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>ColomboDistrict()));}
 
                     else if(title == _list.elementAt(6) )
-                   {
-                   Navigator.push(context, MaterialPageRoute(builder: (context)=>GampahaDistrict()));}
+                    {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>GampahaDistrict()));}
 
 
-                 else if(title == _list.elementAt(9) )
-                 {
-                 Navigator.push(context, MaterialPageRoute(builder: (context)=>KalutharaDistrict()));}
+                    else if(title == _list.elementAt(9) )
+                    {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>KalutharaDistrict()));}
 
 
                     else if(title == _list.elementAt(22) )
@@ -249,26 +260,111 @@ class _DropDownState extends State<DropDown> {
 
                   },
 
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                  label: Text('Find Centers',
+                    style: TextStyle(color: Colors.white,fontSize: 19.0),),
+                  icon: Icon(Icons.location_city, color:Colors.white,),
+                  textColor: Colors.white,
+                  splashColor: Colors.red,
+                  color: Colors.blue,),
+                SizedBox(height: 20.0,),
 
 
 
+                RaisedButton.icon(
+                  onPressed: (){  Navigator.push(context, MaterialPageRoute(builder: (context)=>DetectScreen())); },
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                  label: Text('Waste Classifier Scanner',
+                    style: TextStyle(color: Colors.white,fontSize: 19.0),),
+                  icon: Icon(Icons.camera_alt_outlined, color:Colors.white,),
+                  textColor: Colors.white,
+                  splashColor: Colors.red,
+                  color: Colors.pink,),
 
 
 
-
-
-
-
-
-
-
-
-                  child: Text('Select the centers'),
-                  color: Colors.blue,
-                )
               ],
             ),
+
           ),
-        ));
+
+        ),
+        drawer:Drawer(
+          child: ListView(
+            children: [
+              Container(
+                height: 260.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    bottomRight: Radius.circular(25.0),
+                    bottomLeft: Radius.circular(25.0),
+                  ),
+                  color:  Color(0xFF00897B),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(top: 15.0),
+                      child: Container(
+                        width: 160.0,
+                        height: 160.0,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('images/PlaystoreIcon.jpg',),
+                              fit: BoxFit.cover,
+                            )
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 10.0,),
+                    Text('Waste Recycling in Sri-Lanka',style: TextStyle(fontSize: 22.0,color: Colors.white,fontWeight: FontWeight.bold),),
+                    Text('Powered by VM Mobile',style: TextStyle(fontSize: 20.0,color: Colors.white,fontWeight: FontWeight.bold),),
+                  ],
+                ),
+              ),
+
+              Divider(),
+              ListTile(
+                leading: Icon(Icons.privacy_tip),
+                title: Text('Privacy & policy',style: TextStyle(fontSize: 16.0,fontWeight: FontWeight.bold,color: Colors.grey),),
+                trailing: IconButton(
+                  icon: Icon(Icons.menu),
+                  onPressed: (){
+                   //Navigator.push(context, MaterialPageRoute(builder: (context)=>PrivacyHome()));
+                  },
+                ),
+              ),
+              Divider(),
+
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text('Home',style: TextStyle(fontSize: 16.0,fontWeight: FontWeight.bold,color: Colors.grey),),
+                trailing: IconButton(
+                  icon: Icon(Icons.menu),
+                  onPressed: (){
+                   // Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                  },
+                ),
+              ),
+              Divider(),
+              ListTile(
+                leading: Icon(Icons.my_library_books),
+                title: Text('ඉංග්‍රීසී දැනුම I',style: TextStyle(fontSize: 16.0,fontWeight: FontWeight.bold,color: Colors.grey),),
+                trailing: IconButton(
+                  icon: Icon(Icons.menu),
+                  onPressed: (){
+                    //Navigator.push(context, MaterialPageRoute(builder: (context)=>En()));
+                  },
+                ),
+              ),
+              Divider(),
+            ],
+          ),
+        )
+    );
+
+
   }
 }
