@@ -18,6 +18,7 @@ import 'package:dropdown_field/districts/trinco.dart';
 import 'package:dropdown_field/districts/vavniya.dart';
 import 'package:dropdown_field/screens/ExpandedListAnimationWidget.dart';
 import 'package:dropdown_field/screens/Scrollbar.dart';
+import 'package:dropdown_field/screens/privacy_screen.dart';
 import 'package:dropdown_field/screens2/detect_screen.dart';
 
 import 'package:flutter/material.dart';
@@ -301,7 +302,7 @@ class _DropDownState extends State<DropDown> {
                     bottomRight: Radius.circular(25.0),
                     bottomLeft: Radius.circular(25.0),
                   ),
-                  color:  Color(0xFF00897B),
+                  color: Colors.grey.shade400,
                 ),
                 child: Column(
                   children: [
@@ -312,14 +313,14 @@ class _DropDownState extends State<DropDown> {
                         height: 160.0,
                         decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage('images/PlaystoreIcon.jpg',),
+                              image: AssetImage('images/PlaystoreIcon.png',),
                               fit: BoxFit.cover,
                             )
                         ),
                       ),
                     ),
                     SizedBox(height: 10.0,),
-                    Text('Waste Recycling in Sri-Lanka',style: TextStyle(fontSize: 22.0,color: Colors.white,fontWeight: FontWeight.bold),),
+                    Text('Sri-Lanka Waste Recycling',style: TextStyle(fontSize: 22.0,color: Colors.white,fontWeight: FontWeight.bold),),
                     Text('Powered by VM Mobile',style: TextStyle(fontSize: 20.0,color: Colors.white,fontWeight: FontWeight.bold),),
                   ],
                 ),
@@ -332,34 +333,13 @@ class _DropDownState extends State<DropDown> {
                 trailing: IconButton(
                   icon: Icon(Icons.menu),
                   onPressed: (){
-                   //Navigator.push(context, MaterialPageRoute(builder: (context)=>PrivacyHome()));
+                   Navigator.push(context, MaterialPageRoute(builder: (context)=>PrivacyHome()));
                   },
                 ),
               ),
               Divider(),
 
-              ListTile(
-                leading: Icon(Icons.home),
-                title: Text('Home',style: TextStyle(fontSize: 16.0,fontWeight: FontWeight.bold,color: Colors.grey),),
-                trailing: IconButton(
-                  icon: Icon(Icons.menu),
-                  onPressed: (){
-                   // Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
-                  },
-                ),
-              ),
-              Divider(),
-              ListTile(
-                leading: Icon(Icons.my_library_books),
-                title: Text('ඉංග්‍රීසී දැනුම I',style: TextStyle(fontSize: 16.0,fontWeight: FontWeight.bold,color: Colors.grey),),
-                trailing: IconButton(
-                  icon: Icon(Icons.menu),
-                  onPressed: (){
-                    //Navigator.push(context, MaterialPageRoute(builder: (context)=>En()));
-                  },
-                ),
-              ),
-              Divider(),
+
             ],
           ),
         )

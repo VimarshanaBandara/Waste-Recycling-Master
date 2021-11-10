@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   displaySplash(){
 
-    Timer(Duration(seconds: 4), () async{
+    Timer(Duration(seconds: 3), () async{
 
 
 

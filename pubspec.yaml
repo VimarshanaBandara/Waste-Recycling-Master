@@ -23,6 +23,7 @@ dependencies:
   tflite:
   percent_indicator:
   camera:
+  url_launcher: ^6.0.12
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -55,6 +56,7 @@ flutter:
     - images/bg.png
     - images/bg1.png
     - images/sp.png
+    - images/PlaystoreIcon.png
 
 
 
